@@ -1,0 +1,12 @@
+.hoverBox:hover .icon {
+  color: aliceblue;
+  transition: all 0.5s ease;
+}
+.arrowicon:hover {
+  background: #fe9703;
+  transition: all 0.3s ease-in;
+  color: aliceblue;
+}
+.arrowicon {
+  color: black;
+}
