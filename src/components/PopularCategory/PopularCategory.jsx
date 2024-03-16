@@ -2,6 +2,7 @@ import { Box, Container, Typography, Grid } from '@mui/material'
 import PopularStyle from './PopularStyle';
 import data from './PopularArray';
 import './Popular.css'
+import { Link } from 'react-router-dom';
 
 const Popular = () => {
     return (
@@ -36,7 +37,7 @@ const Popular = () => {
                                         }}> {dt.h1} </Typography>
                                         <Typography className='icon' sx={PopularStyle.subTitle}> {dt.p} </Typography>
                                     </Box>
-                                    <Box className="arrowicon" sx={PopularStyle.arrowIcons}> {dt.arr} </Box>
+                                    <Box className="arrowicon" sx={PopularStyle.arrowIcons}> <Link to="/jobs">{dt.arr}</Link> </Box>
                                 </Box>
 
                             </Grid>

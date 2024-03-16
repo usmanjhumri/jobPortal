@@ -20,7 +20,7 @@ const SavedJobs = () => {
                                 <Box mt={1} sx={styles.signinsingup}>
                                     <Link to='/' style={styles.singupsigninhome}>Home</Link>
                                     <ArrowForwardIosIcon sx={styles.loginsinup} />
-                                    <Typography sx={styles.loginsinup}>Login</Typography>
+                                    <Typography sx={styles.loginsinup}>Saved Jobs</Typography>
                                 </Box>
                             </Box>
                         </Box>
