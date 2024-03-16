@@ -59,9 +59,21 @@ const Header = () => {
                                     </NavLink>
                                 </Typography>
                                 <Typography>
+                                    <NavLink to={"/jobs"}
+                                        style={{ textDecoration: "none", color: activeOffest ? "#000" : "#FFF" }}>
+                                        Jobs
+                                    </NavLink>
+                                </Typography>
+                                <Typography>
                                     <NavLink to={"/about"}
                                         style={{ textDecoration: "none", color: activeOffest ? "#000" : "#FFF" }}>
                                         About
+                                    </NavLink>
+                                </Typography>
+                                <Typography>
+                                    <NavLink to={"/contact-us"}
+                                        style={{ textDecoration: "none", color: activeOffest ? "#000" : "#FFF" }}>
+                                        ContactUs
                                     </NavLink>
                                 </Typography>
                                 <Typography>

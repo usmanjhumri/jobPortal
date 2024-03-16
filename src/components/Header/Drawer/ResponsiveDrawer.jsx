@@ -102,9 +102,24 @@ const ResponsiveDrawer = ({ mobileOpen, setMobileOpen }) => {
                         <Typography sx={{ margin: "1rem 0px" }}
                             onClick={() => handleCloseDrawer()}
                         >
+                            <NavLink to={"/jobs"}
+                                style={{ textDecoration: "none", color: "black" }}>
+                                Jobs
+                            </NavLink>
+                        </Typography>
+                        <Typography sx={{ margin: "1rem 0px" }}
+                            onClick={() => handleCloseDrawer()}
+                        >
                             <NavLink to={"/about"}
                                 style={{ textDecoration: "none", color: "black" }}>
                                 About
+                            </NavLink>
+                        </Typography>
+                        <Typography sx={{ margin: "1rem 0px" }}
+                            onClick={() => handleCloseDrawer()}>
+                            <NavLink to={"/contact-us"}
+                                style={{ textDecoration: "none", color: "black" }}>
+                                ContactUs
                             </NavLink>
                         </Typography>
                         <Typography sx={{ margin: "1rem 0px" }}
