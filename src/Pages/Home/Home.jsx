@@ -52,7 +52,7 @@ const Home = () => {
                                         }}
                                     />
 
-                                    <Select
+                                    <Select autoFocus
                                         placeholder="Select a pet…"
                                         indicator={<KeyboardArrowDown />}
                                         sx={{

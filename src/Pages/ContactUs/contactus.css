@@ -1,0 +1,11 @@
+.containerBox {
+  position: absolute;
+  content: "";
+  top: -85px;
+  left: -120px;
+  width: calc(100% + 240px);
+  height: calc(100% + 145px);
+  background: #fff;
+  border-top: 5px solid #fe9703;
+  z-index: -1;
+}

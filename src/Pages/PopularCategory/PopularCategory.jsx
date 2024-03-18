@@ -20,24 +20,23 @@ const Popular = () => {
                                     backgroundColor: '#fff',
                                     p: 2,
                                     height: '120px',
-                                    '&:hover': {
-                                        background: `url(https://care-job.vercel.app/_next/static/media/shape.db02af9b.png)`,
-                                        transition: "all 0.5s ease"
-                                    }
                                 }}>
                                     <Box className="icon" sx={{
                                         color: '#26ae61',
                                         fontSize: '35px',
                                     }}> {dt.icon} </Box>
                                     <Box>
-                                        <Typography variant='h6' sx={{
+                                        <Typography className="icon" variant='h6' sx={{
                                             color: '#1c2733',
                                             fontWeight: '700'
 
                                         }}> {dt.h1} </Typography>
                                         <Typography className='icon' sx={PopularStyle.subTitle}> {dt.p} </Typography>
                                     </Box>
-                                    <Box className="arrowicon" sx={PopularStyle.arrowIcons}> <Link to="/jobs">{dt.arr}</Link> </Box>
+                                    <Link to="/jobs">
+                                        <Box className="arrowicon" sx={PopularStyle.arrowIcons}>{dt.arr}
+                                        </Box>
+                                    </Link>
                                 </Box>
 
                             </Grid>

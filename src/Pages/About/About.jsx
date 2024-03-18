@@ -1,9 +1,9 @@
 import { Box, Container, Grid, Typography } from '@mui/material'
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import styles from '../SignUp/SignUpStyle'
 import { Link } from 'react-router-dom'
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import styles from '../../components/SignUp/SignUpStyle';
 
-const SavedJobs = () => {
+const About = () => {
     return (
         <>
             <Box sx={styles.SingUp} className="sinupSingin">
@@ -15,12 +15,12 @@ const SavedJobs = () => {
                                     variant="h1"
                                     sx={styles.register}
                                 >
-                                    Saved Jobs
+                                    About
                                 </Typography>
                                 <Box mt={1} sx={styles.signinsingup}>
                                     <Link to='/' style={styles.singupsigninhome}>Home</Link>
                                     <ArrowForwardIosIcon sx={styles.loginsinup} />
-                                    <Typography sx={styles.loginsinup}>Saved Jobs</Typography>
+                                    <Typography sx={styles.loginsinup}>About</Typography>
                                 </Box>
                             </Box>
                         </Box>
@@ -31,4 +31,4 @@ const SavedJobs = () => {
     )
 }
 
-export default SavedJobs
+export default About

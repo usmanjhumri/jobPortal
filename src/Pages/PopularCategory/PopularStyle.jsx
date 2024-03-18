@@ -15,12 +15,14 @@ const PopularStyle = {
     },
     arrowIcons: {
         border: '2px solid #dfdfdf',
-        width: '40px',
-        height: '38px',
+        // width: '40px',
+        // height: '40px',
         fontSize: '13px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
+        padding: "0.5rem 0.6rem"
+        // margin: "auto"
+        // display: 'flex',
+        // alignItems: 'center',
+        // justifyContent: 'center',
 
 
     },

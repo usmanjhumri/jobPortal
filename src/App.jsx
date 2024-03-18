@@ -3,12 +3,12 @@ import './App.css'
 import Header from './components/Header/Header'
 import SignIn from './components/SignIn/SignIn'
 import SignUp from './components/SignUp/SignUp'
-import Home from './components/Home/Home'
 import Footer from './components/Footer/Footer'
-import SavedJobs from './components/SavedJobs/SavedJobs'
-import About from './components/About/About'
-import ContactUs from './components/ContactUs/ContactUs'
-import Jobs from './components/Jobs/Jobs'
+import Home from './Pages/Home/Home'
+import SavedJobs from './Pages/SavedJobs/SavedJobs'
+import About from './Pages/About/About'
+import ContactUs from './Pages/ContactUs/ContactUs'
+import Jobs from './Pages/Jobs/Jobs'
 function App() {
   return (
     <>
