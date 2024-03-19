@@ -9,11 +9,9 @@ import './Header.css'
 const Header = () => {
     const [mobileOpen, setMobileOpen] = useState(false)
     const [activeOffest, setActiveOffset] = useState(false)
-    console.log(activeOffest, ' scrolldown');
     useEffect(() => {
         const handleScroll = () => {
             const scrollYOffset = window.scrollY > 100;
-            console.log("srolling..........");
             setActiveOffset(scrollYOffset);
         };
         window.addEventListener("scroll", handleScroll, { passive: true });
@@ -27,14 +25,7 @@ const Header = () => {
     }
     return (
         <>
-            <Box className={activeOffest ? "navbar navbar-fixed" : "navbar"} sx={{
-                position: "fixed",
-                zIndex: 1,
-                left: 0,
-                right: 0,
-                top: 0,
-                opacity: 9
-            }}>
+            <Box className={activeOffest ? "navbar navbar-fixed" : "navbar"} sx={HeaderStyle.headerNavBox}>
                 <Container>
                     <Box sx={HeaderStyle.mainBox}>
                         <Box sx={{ flexGrow: 1 }}>

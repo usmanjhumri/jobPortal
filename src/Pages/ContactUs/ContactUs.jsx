@@ -2,11 +2,18 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { Box, Container, Grid, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 import styles from '../../components/SignUp/SignUpStyle';
-// import './contactus.css'
 import TextImg from '../../assets/hometextBG.png'
 import '../Home/Home.css'
-import { FaMapMarkerAlt } from "react-icons/fa";
-
+import contactStyle from './contactStyle';
+import locations from './contactArray';
+import { Input } from '@mui/joy';
+import { FaRegUser } from "react-icons/fa";
+import { MdKeyboardArrowRight, MdOutlineEmail } from "react-icons/md";
+import { AiOutlinePhone } from "react-icons/ai";
+import { Textarea } from '@mui/joy';
+import { LiaPenAltSolid } from "react-icons/lia";
+import { Button } from '@mui/joy';
+import './contactus.css'
 
 const ContactUs = () => {
     return (
@@ -58,40 +65,58 @@ const ContactUs = () => {
                     </Box>
                     <Grid container sx={{ margin: "auto" }}>
                         <Grid item xs={12} md={4}>
-                            <Box sx={{
-                                display: "flex",
-                                justifyContent: "space-around",
-                                alignItems: "center",
-                                gap: 2
-                            }}>
-                                <Box>
+                            {
+                                locations.map((location, index) => (
+                                    <Box key={index} sx={contactStyle.locatinBox}>
+                                        <Box sx={contactStyle.locationBox1}>
+                                            {location.icon}
+                                        </Box>
+                                        <Box>
+                                            <Typography component='h4' sx={contactStyle.contactHeading}>
+                                                {location.heading}
+                                            </Typography>
+                                            {typeof location.address === 'string' ? (
+                                                <Typography sx={contactStyle.locationAdress}>
+                                                    {location.address}
+                                                </Typography>
+                                            ) : (
+                                                location.address.map((link, idx) => (
+                                                    <Typography key={idx} sx={contactStyle.locationAdress}>
+                                                        <a style={contactStyle.emailLink} href={link.link}>{link.text}</a>
+                                                    </Typography>
+                                                ))
+                                            )}
+                                        </Box>
+                                    </Box>
+                                ))
+                            }
 
-                                    <FaMapMarkerAlt style={{
-                                        background: "#26ae61",
-                                        fontSize: "40px",
-                                        color: "#FFFFFF",
-                                        border: "5px solid #51be81",
-                                        borderRadius: "50%"
-                                    }} />
-                                </Box>
-                                <Box>
-                                    <Typography component='h4'>
-                                        Location
-                                    </Typography>
-                                    <Typography sx={{
-                                        maxWidth: "60%",
-                                        fontSize: "15px",
-                                        fontWeight: 400,
-                                        lineHeight: "28px",
-                                        color: "#667488"
-                                    }}>
-                                        205 Main Street, 2nd - Floor,
-                                        D - Block, New York
-                                    </Typography>
-                                </Box>
-                            </Box>
                         </Grid>
-                        <Grid item xs={12} md={8}>hi this is usman latif</Grid>
+                        <Grid item xs={12} md={8}>
+                            <Box sx={contactStyle.fullNameEmail}>
+                                <Input fullWidth sx={{ margin: "1rem 0" }}
+                                    placeholder="Enter Your Full Name"
+                                    endDecorator={<FaRegUser style={contactStyle.inputicons} />}
+                                />
+                                <Input fullWidth sx={{ margin: "1rem 0" }}
+                                    placeholder="Enter your Email Address"
+                                    endDecorator={<MdOutlineEmail style={contactStyle.inputicons} />}
+                                />
+                            </Box>
+                            <Input
+                                placeholder="Enter Your Phone Number"
+                                endDecorator={<AiOutlinePhone style={contactStyle.inputicons} />}
+                                sx={{ margin: "1rem 0" }}
+                            />
+                            <Textarea
+                                placeholder="Write Your Message"
+                                startDecorator={<LiaPenAltSolid style={contactStyle.textArea} />}
+                                minRows={6}
+                            />
+                            <Button fullWidth className='sendMessage greens' type='submit' endDecorator={<MdKeyboardArrowRight />}  >
+                                Send Message
+                            </Button>
+                        </Grid>
                     </Grid>
                 </Container>
             </Box>

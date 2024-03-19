@@ -2,7 +2,7 @@ import { Container, Grid, Typography, Box, } from '@mui/material';
 import HomeStyle from './HomeStyle';
 import Popular from '../PopularCategory/PopularCategory';
 import NewsandBlogs from '../Latest News & Blog/News&Blog';
-import Select, { selectClasses } from '@mui/joy/Select';
+import Select from '@mui/joy/Select';
 import Option from '@mui/joy/Option';
 import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
 import Input from '@mui/joy/Input';
@@ -25,49 +25,24 @@ const Home = () => {
                             <span className='shape-plus'>+</span>
                         </Box>
                         <Grid item xs={12} md={7} sx={{ margin: "auto" }}>
-                            <Box sx={{
-                                position: "absolute",
-                                left: "6%",
-                                top: "50%",
-                                display: { md: "block", xs: "none" }
-                            }}>
+                            <Box sx={HomeStyle.bgImg}>
                                 <Box component="img" maxWidth="100%" src={TextImg} />
                             </Box>
                             <Box sx={{ marginTop: { md: "3rem", xs: "12rem" } }}>
                                 <Typography sx={HomeStyle.dreamJobs}>
                                     <span style={{ color: "#fe9703" }}>2560</span> Thousands Dream Jobs Available Now
                                 </Typography>
-                                <Box mt={4} sx={{
-                                    display: { md: "flex", xs: "wrap" },
-                                    alignItems: "center",
-                                    background: "#FFF",
-                                    borderRadius: "30px",
-                                }}>
+                                <Box mt={4} sx={HomeStyle.searchBox1}>
                                     <Input
                                         placeholder="Your location"
                                         endDecorator={<LocationOn sx={{ color: "#fe9703", fontSize: "18px" }} />}
-                                        sx={{
-                                            borderRight: "none", width: "100%", padding: "0.7rem 1rem",
-                                            borderRadius: { md: "30px 0 0 30px", xs: "none" },
-                                        }}
+                                        sx={HomeStyle.searchInput}
                                     />
 
                                     <Select autoFocus
                                         placeholder="Select a pet…"
                                         indicator={<KeyboardArrowDown />}
-                                        sx={{
-                                            width: "100%",
-                                            // borderLeft: "none",
-                                            borderRight: "none",
-                                            padding: "0.7rem 1rem",
-                                            [`& .${selectClasses.indicator}`]: {
-                                                transition: '0.2s',
-                                                [`&.${selectClasses.expanded}`]: {
-                                                    transform: 'rotate(-180deg)',
-                                                },
-                                            },
-
-                                        }}
+                                        sx={HomeStyle.searchSelect}
                                     >
                                         <Option value="dog">Dog</Option>
                                         <Option value="cat">Cat</Option>
@@ -76,13 +51,7 @@ const Home = () => {
                                     </Select>
 
 
-                                    <Button sx={{
-                                        borderRadius: { md: "30px", xs: "none" },
-                                        background: "#26ae61",
-                                        padding: "0.7rem 0",
-                                        width: { md: "60%", xs: "100%" }
-
-                                    }} endDecorator={<ArrowForwardIcon />}>
+                                    <Button sx={HomeStyle.searchBtn} endDecorator={<ArrowForwardIcon />}>
                                         Find Jobs
                                     </Button>
                                 </Box>

@@ -41,6 +41,14 @@ const HeaderStyle = {
         display: "flex",
         alignContent: "center",
     },
+    headerNavBox: {
+        position: "fixed",
+        zIndex: 1,
+        left: 0,
+        right: 0,
+        top: 0,
+        opacity: 9
+    },
     HeaderItem: {
         display: "flex",
         alignItems: "center",
