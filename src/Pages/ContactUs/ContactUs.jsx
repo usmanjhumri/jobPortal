@@ -5,6 +5,7 @@ import styles from '../../components/SignUp/SignUpStyle';
 // import './contactus.css'
 import TextImg from '../../assets/hometextBG.png'
 import '../Home/Home.css'
+import { FaMapMarkerAlt } from "react-icons/fa";
 
 
 const ContactUs = () => {
@@ -47,7 +48,7 @@ const ContactUs = () => {
             </Box>
             <Box>
                 <Container className='containerBox'>
-                    <Box>
+                    <Box sx={{ textAlign: "center", margin: "1rem 0" }}>
                         <Typography>
                             CONTACT US
                         </Typography>
@@ -57,9 +58,40 @@ const ContactUs = () => {
                     </Box>
                     <Grid container sx={{ margin: "auto" }}>
                         <Grid item xs={12} md={4}>
+                            <Box sx={{
+                                display: "flex",
+                                justifyContent: "space-around",
+                                alignItems: "center",
+                                gap: 2
+                            }}>
+                                <Box>
 
+                                    <FaMapMarkerAlt style={{
+                                        background: "#26ae61",
+                                        fontSize: "40px",
+                                        color: "#FFFFFF",
+                                        border: "5px solid #51be81",
+                                        borderRadius: "50%"
+                                    }} />
+                                </Box>
+                                <Box>
+                                    <Typography component='h4'>
+                                        Location
+                                    </Typography>
+                                    <Typography sx={{
+                                        maxWidth: "60%",
+                                        fontSize: "15px",
+                                        fontWeight: 400,
+                                        lineHeight: "28px",
+                                        color: "#667488"
+                                    }}>
+                                        205 Main Street, 2nd - Floor,
+                                        D - Block, New York
+                                    </Typography>
+                                </Box>
+                            </Box>
                         </Grid>
-                        {/* <Grid item xs={12} md={8}>hi this is usman latif</Grid> */}
+                        <Grid item xs={12} md={8}>hi this is usman latif</Grid>
                     </Grid>
                 </Container>
             </Box>
