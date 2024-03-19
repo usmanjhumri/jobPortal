@@ -9,7 +9,7 @@
   border-top: 5px solid #fe9703;
   z-index: 1;
 }
-.sendMessage::before {
+/* .sendMessage::before {
   top: 0 !important;
   width: 0 !important;
   left: auto !important;
@@ -27,4 +27,4 @@
 .sendMessage {
   margin: 1rem 0 !important;
   background: #26ae61 !important;
-}
+} */

@@ -44,7 +44,34 @@ const contactStyle = {
         margin: "1rem 0",
         gap: 3
     },
-    textArea: { color: "#fe9703", fontSize: "18px", position: "absolute", right: 10 },
-    inputicons: { color: "#fe9703", fontSize: "18px" }
+    textArea: {
+        color: "#fe9703",
+        fontSize: "18px",
+        position: "absolute",
+        right: 10
+    },
+
+    inputicons: {
+        color: "#fe9703",
+        fontSize: "18px"
+    },
+    sendMessage: {
+        fontSize: "1rem",
+        fontWeight: 400,
+
+        lineHeight: 1.7,
+        letterSpacing: "0.00938em",
+        color: "#667488"
+    },
+    contactUs: {
+        fontSize: "1rem",
+        color: "#228B22",
+        fontWeight: 400,
+        marginTop: "2rem"
+    },
+    contactUsContent: {
+        textAlign: "center",
+        margin: "1rem 0"
+    }
 }
 export default contactStyle

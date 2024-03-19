@@ -13,3 +13,6 @@
   height: 100%;
   background: rgba(0, 2, 5, 0.7);
 }
+body {
+  background: #f5f7fc;
+}
