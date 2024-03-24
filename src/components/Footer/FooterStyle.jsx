@@ -12,7 +12,7 @@ const FooterStyle = {
         backgroundImage: `url(${BG})`,
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
-        backgroundSize: "100%"
+        backgroundSize: "cover"
 
     },
     careJobs: {
