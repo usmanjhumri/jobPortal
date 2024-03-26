@@ -21,16 +21,18 @@ function NewsandBlogs() {
                                 return (
                                     <>
                                         <Grid key={ind} item xs={12} sm={6} md={4}>
-                                            <Box sx={{
+                                            <Box className="img-box" sx={{
                                                 border: "1px solid #667488",
                                             }}>
                                                 <Box
                                                     sx={{
                                                         position: "relative"
                                                     }}>
-                                                    <Box component="img" src={item.img} sx={{
-                                                        width: "100%"
-                                                    }} />
+                                                    <Box>
+                                                        <img className="img" src={item.img} style={{
+                                                            width: "100%"
+                                                        }} />
+                                                    </Box>
                                                     <span style={newsBlogStyle.jobdate}>
                                                         <Typography variant="h4" sx={newsBlogStyle.jobdatetime}>
                                                             20

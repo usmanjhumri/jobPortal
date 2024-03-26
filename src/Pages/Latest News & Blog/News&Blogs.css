@@ -76,8 +76,11 @@
   border-radius: 30px;
 }
 .img-box .img {
-  /* transition: transform 0.5s ease; */
+  transition: transform 0.5s ease;
 }
 .img-box:hover .img {
-  /* transform: scale(1.1); */
+  transform: scale(1.1);
+}
+.img-box {
+  overflow: hidden;
 }
